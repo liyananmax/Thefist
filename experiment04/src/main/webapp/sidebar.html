@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        aside{
+            width: 300px;
+            background-color:#f1f1f1;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 5px;
+        }
+        a:hover{
+            color:white;
+            background-color: black;
+        }
+        h2{
+            color: white;
+            background-color: #3185bf;
+            padding: 5px;
+        }
+        h2:hover{
+            color:white;
+            background-color: black;
+        }
+        ul{
+             display: none;
+        }
+    </style>
+</head>
+<body>
+<aside>
+    <h2>加油楠楠</h2>
+    <ul>
+        <li><a href="#">呜呜呜</a></li>
+        <li><a href="#">冲不动了</a></li>
+        <li><a href="#">咱就是说</a></li>
+    </ul>
+
+    <h2>冲一波冲一波</h2>
+    <ul>
+        <li><a href="#">哼哼哼哼</a></li>
+        <li><a href="#">呜呜呜</a></li>
+        <li><a href="#">我有罪</a></li>
+        <li><a href="#">呜呜呜</a></li>
+    </ul>
+</aside>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+ $(function(){
+     $("h2").click(function(){
+        let ul=$(this).next("ul");
+        ul.slideToggle();
+        $("ul").not(ul).slideUp();
+     });
+ })
+
+</script>
+</body>
+</html>
